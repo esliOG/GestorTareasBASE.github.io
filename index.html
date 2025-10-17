@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas | Proyecto Android</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0D47A1;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      padding: 30px;
+    }
+    h1 { font-size: 2em; }
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    code {
+      display: block;
+      text-align: left;
+      background: #1E1E1E;
+      color: #00FFAA;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: "Consolas", monospace;
+    }
+    img {
+      width: 280px;
+      margin: 12px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    footer {
+      background: #003366;
+      padding: 20px;
+      font-size: 14px;
+    }
+    button {
+      background: #00BFA6;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #009e8f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📱 Gestor de Tareas</h1>
+    <h3>Proyecto Android Studio | Jetpack Compose</h3>
+  </header>
+
+  <section>
+    <h2>🧾 Descripción</h2>
+    <p>Esta aplicación fue desarrollada con Jetpack Compose en Android Studio. 
+    Permite gestionar tareas personales, ver el progreso y recibir consejos de productividad diaria.</p>
+
+    <h2>👩‍💻 Autor del proyecto</h2>
+    <p><strong>Nombre:</strong> Esli<br>
+       <strong>Materia:</strong> Desarrollo de Aplicaciones Móviles<br>
+       <strong>Docente:</strong> Anastacio Rodríguez García<br>
+       <strong>Fecha:</strong> Octubre 2025</p>
+
+    <h2>📸 Capturas de Pantalla</h2>
+    <p>(Sube tus imágenes aquí y reemplaza los enlaces ↓)</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_Studio_Icon_2023.svg" alt="Inicio">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Mis Tareas">
+
+    <h2>💻 Fragmento del Código</h2>
+    <code>
+@Composable
+fun PantallaMisTareas() {
+    Scaffold(
+        topBar = { AppHeader("Mis Tareas") },
+        bottomBar = { Footer() },
+        containerColor = PrimaryBlue
+    ) { innerPadding ->
+        LazyColumn(modifier = Modifier.padding(innerPadding)) {
+            item { TaskItem("Entregar reporte de proyecto", "📄") }
+            item { TaskItem("Revisar correos", "📧") }
+            item { TaskItem("Reunión de equipo", "👥") }
+            item { TaskItem("Planificar la próxima semana", "📅") }
+        }
+    }
+}
+    </code>
+
+    <h2>🌐 Enlace al Código Fuente</h2>
+    <p><a href="https://github.com/tuusuario/GestorTareasBASE.github.io" style="color:#00FFAA;">Ver en GitHub</a></p>
+
+    <h2>🚀 Descargar Proyecto Android</h2>
+    <a href="https://github.com/tuusuario/GestorTareasBASE.github.io/archive/refs/heads/main.zip">
+      <button>Descargar ZIP</button>
+    </a>
+  </section>
+
+  <footer>
+    © 2025 Gestor de Tareas — Creado en Jetpack Compose
+  </footer>
+
+</body>
+</html>
